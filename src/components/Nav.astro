@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/log.png";
+import { FaFacebook } from "react-icons/fa6";
+import { BsInstagram } from "react-icons/bs";
+import { SiWhatsapp } from "react-icons/si";
+import { FaPhoneFlip } from "react-icons/fa6";
+---
+
+<header
+  class="w-full flex flex-col xl:flex-row items-center h-32 max-w-7xl p-2"
+>
+  <div class="w-full xl:w-1/2 flex justify-between">
+    <a class="">
+      <Image
+        src={logo}
+        alt="Logo de RAUMA Proyecta"
+        class="w-20 xl:w-32 hover:cursor-pointer"
+      />
+    </a>
+    <div class="flex gap-4 items-center">
+      <FaFacebook
+        size={22}
+        className="text-red-rauma hover:cursor-pointer lg:hidden"
+      />
+      <BsInstagram
+        size={22}
+        className="text-red-rauma hover:cursor-pointer lg:hidden"
+      />
+      <SiWhatsapp
+        size={22}
+        className="text-red-rauma hover:cursor-pointer lg:hidden"
+      />
+      <FaPhoneFlip
+        size={22}
+        className="text-red-rauma hover:cursor-pointer lg:hidden"
+      />
+    </div>
+  </div>
+
+  <div class="flex w-full xl:w-1/2 h-full flex-col">
+    <div class="w-full h-1/2 flex justify-end gap-4">
+      <FaFacebook
+        size={22}
+        className="text-red-rauma hover:cursor-pointer hidden lg:block"
+      />
+      <BsInstagram
+        size={22}
+        className="text-red-rauma hover:cursor-pointer hidden lg:block"
+      />
+      <SiWhatsapp
+        size={22}
+        className="text-red-rauma hover:cursor-pointer hidden lg:block"
+      />
+      <FaPhoneFlip
+        size={22}
+        className="text-red-rauma hover:cursor-pointer hidden lg:block"
+      />
+    </div>
+    <nav class="w-full h-16">
+      <ul class="w-full flex justify-end gap-4 xl:gap-12 items-center h-full">
+        <li
+          class="text-gray-700 hover:text-red-500 hover:underline font-semibold hover:cursor-pointer transition-all ease-in-out uppercase text-xs xl:text-sm"
+        >
+          <a href="#">Nosotros</a>
+        </li>
+        <li
+          class="text-gray-700 hover:text-red-500 hover:underline font-semibold hover:cursor-pointer transition-all ease-in-out uppercase text-xs xl:text-sm"
+        >
+          <a href="#">Proyectos</a>
+        </li>
+        <li
+          class="text-gray-700 hover:text-red-500 hover:underline font-semibold hover:cursor-pointer transition-all ease-in-out uppercase text-xs xl:text-sm"
+        >
+          <a href="#">Servicios</a>
+        </li>
+        <li>
+          <button
+            class="text-white px-4 py-2 bg-red-rauma hover:bg-red-700 uppercase text-sm font-semibold rounded transition-all ease-in-out"
+          >
+            Contacto
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .text-gray-700 {
+    color: #4a4a4a;
+  }
+  .hover\:text-red-500:hover {
+    color: #ae282f;
+  }
+  .bg-red-500 {
+    background-color: #ef4444;
+  }
+  .hover\:bg-red-600:hover {
+    background-color: #dc2626;
+  }
+  .hover\:underline:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+import heroImg from "../assets/hero-img.svg";
+import heroImg2 from "../assets/her3.png";
+---
+
+<section class="w-full max-w-7xl flex-1 py-8 flex flex-col xl:flex-row-reverse">
+  <main class="w-full xl:w-3/5 h-full max-h-[40rem] relative">
+    <Image
+      src={heroImg2}
+      alt="Hero image"
+      class="w-full h-full object-cover fade-up"
+      loading="lazy"
+    />
+    <div class="absolute bottom-10 w-full lg:w-3/5 h-2/6 flex flex-col">
+      <div class="w-full h-1/3 flex justify-end fade-in">
+        <div
+          class="relative flex w-1/3 h-full font-semibold text-sm justify-center items-center uppercase"
+        >
+          <div
+            class="w-full h-full bg-black bg-opacity-50 absolute"
+            style="backdrop-filter: blur(10px);"
+          >
+          </div>
+          <h2
+            class="absolute text-white text-xs font-bold text-center lg:text-base"
+          >
+            Proyectos ejecutivos
+          </h2>
+        </div>
+      </div>
+      <div class="w-full h-1/3 flex justify-center fade-in-3">
+        <div
+          class="relative flex w-1/3 h-full bg-red-rauma justify-center items-center uppercase text-white font-semibold text-sm"
+        >
+          <h2>Cancelería</h2>
+        </div>
+      </div>
+      <div class="w-full h-1/3 flex fade-in-2">
+        <div
+          class="relative flex w-1/3 h-full font-semibold text-sm justify-center items-center uppercase"
+        >
+          <div
+            class="w-full h-full bg-black bg-opacity-50 absolute"
+            style="backdrop-filter: blur(10px);"
+          >
+          </div>
+          <h2 class="absolute text-white text-xs lg:text-base">
+            Remodelaciones
+          </h2>
+        </div>
+      </div>
+    </div>
+  </main>
+  <aside class="w-full p-3 xl:p-0 xl:w-2/5 h-full flex flex-col fade-up">
+    <h1 class="text-3xl xl:text-5xl font-black text-black">
+      Soluciones integrales ejecutadas por expertos 100% garantizados
+    </h1>
+    <h3 class="mt-2 xl:mt-12 xl:text-lg">
+      Descubre la excelencia, la innovación y el compromiso que define a RAUMA
+      construcciones.
+    </h3>
+    <div class="mt-8 xl:mt-24 w-full flex justify-center">
+      <button
+        class="text-white px-8 py-3 bg-red-rauma hover:bg-red-700 uppercase text-sm font-semibold rounded transition-all ease-in-out"
+        >Más Información</button
+      >
+    </div>
+  </aside>
+</section>
+
+<style>
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-out 0.5s forwards;
+  }
+  .fade-in-2 {
+    opacity: 0;
+    animation: fadeIn .5s ease-out 0.8s forwards;
+  }
+  .fade-in-3 {
+    opacity: 0;
+    animation: fadeIn .5s ease-out 1.1s forwards;
+  }
+</style>
